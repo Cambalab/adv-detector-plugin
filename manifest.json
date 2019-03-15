@@ -1,0 +1,45 @@
+{
+  "name": "Publielectoral Plugin",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Escanea la publicidad que aparece en tu cuenta de Facebook",
+  "icons": {
+    "16": "src/icons/icon-16.png",
+    "128": "src/icons/icon-128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "options_ui": {
+    "page": "src/options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "src/icons/icon-19.png",
+      "38": "src/icons/icon-38.png"
+    },
+    "default_title": "Publielectoral Plugin",
+    "default_popup": "src/popup.html"
+  }
+}
