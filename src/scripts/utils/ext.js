@@ -33,35 +33,35 @@ function Extension () {
       if (chrome[api]) {
         _this[api] = chrome[api]
       }
-    } catch (e) {console.log('ERROR: ', e}
+    } catch (e) {console.log('ERROR: ', e)}
 
     try {
       if (window[api]) {
         _this[api] = window[api]
       }
-    } catch (e) {console.log('ERROR: ', e}
+    } catch (e) {console.log('ERROR: ', e)}
 
     try {
       if (browser[api]) {
         _this[api] = browser[api]
       }
-    } catch (e) {console.log('ERROR: ', e}
+    } catch (e) {console.log('ERROR: ', e)}
     try {
       _this.api = browser.extension[api]
-    } catch (e) {console.log('ERROR: ', e}
+    } catch (e) {console.log('ERROR: ', e)}
   })
 
   try {
     if (browser && browser.runtime) {
       this.runtime = browser.runtime
     }
-  } catch (e) {console.log('ERROR: ', e}
+  } catch (e) {console.log('ERROR: ', e)}
 
   try {
     if (browser && browser.browserAction) {
       this.browserAction = browser.browserAction
     }
-  } catch (e) {console.log('ERROR: ', e}
+  } catch (e) {console.log('ERROR: ', e)}
 
 }
 
