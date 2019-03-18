@@ -1,11 +1,9 @@
 var scanButton = document.getElementById('scanButton');
 var isActive = false;
-isActive ? scanButton.innerHTML = 'Desactivar' : scanButton.innerHTML = 'Activar';
-isActive = !isActive;
+const toggleButton = require('./utils/toggleButton.js');
+
+toggleButton(scanButton);
 scanButton.addEventListener('click', (e) => {
-  isActive ? scanButton.innerHTML = 'Desactivar' : scanButton.innerHTML = 'Activar';
-  isActive ? scanButton.className = 'btn btn-danger btn-lg btn-block' : scanButton.className = 'btn btn-success btn-lg btn-block';
-  isActive = !isActive;
+  toggleButton(scanButton);
   // script de scaneo
-  !isActive ? alert('Activaste el plugin') : alert('Desastivaste el plugin');
 });

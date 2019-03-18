@@ -5,8 +5,8 @@
   "description": "Escanea la publicidad que aparece en tu cuenta de Facebook",
   "default_locale": "en",
   "icons": {
-    "16": "icons/icon-16.png",
-    "128": "icons/icon-128.png"
+    "16": "icons/icon.png",
+    "128": "icons/icon.png"
   },
   "background": {
     "scripts": [
@@ -37,8 +37,8 @@
   ],
   "browser_action": {
     "default_icon": {
-      "19": "icons/icon-19.png",
-      "38": "icons/icon-38.png"
+      "19": "icons/icon.png",
+      "38": "icons/icon.png"
     },
     "default_title": "Publielectoral Plugin",
     "default_popup": "popup.html"
