@@ -91,6 +91,39 @@ footer {
   font-size: 1em;
 }
 
+.dropdown-menu {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font-size: 16px;
+  color: #000;
+  float: left;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+option {
+  display: block;
+  min-height: 1em;
+  width: 100%;
+  height: 32px;
+  margin: 4px 0px 4px 0px;
+  padding: 0px 2px 1px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  background-color: #fafafa;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(56,198,243,0.72);
+    color: #fafafa;
+  }
+}
+
 .image-header {
   min-width: 200px;
   max-width: 200px;
@@ -104,13 +137,19 @@ footer {
 }
 
 .container {
-  margint-top: 10px;
+  text-align: center;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
+.container #location-text {
+  margin-bottom: 9px;
+}
+
 .about {
-  font-style: italic;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-weight: 100;
   font-size: 12px;
-  text-align: right;
 }
