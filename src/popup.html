@@ -3,19 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="styles/popup.scss" rel="stylesheet">
+    <link href="styles/popup.css" rel="stylesheet">
   </head>
+
   <body>
-    <div id="app" class="popup-content">
-      <div class="image-header">
-        <img src="images/logo.png" alt="publi-electoral" class="image">
-        <!-- <h1 class="app-name">PubliElectoral</h1> -->
+    <div id="app" class="">
+      <div class="image-header container">
+        <img src="images/logo.png" alt="Publielectoral" class="image">
       </div>
-      <div id="display-container">
-        <button type="button" id="scanButton"></button>
+
+      <hr>
+
+      <div class="container">
+        <label for="sel1">Ubicación:</label>
+        <select id="location">
+           <option>Capital Federal</option>
+           <option>Buenos Aires</option>
+           <option>Santa Fé</option>
+           <option>Córdoba</option>
+           <option>Tucumán</option>
+        </select>
       </div>
-    </div>
+
+      <hr>
+
+      <div class="container about">
+        <a href="https://adc.org.ar" target="_blank">Acerca de Publielectoral</a>
+      </div>
+
     <script src="scripts/popup.js"></script>
   </body>
 </html>
