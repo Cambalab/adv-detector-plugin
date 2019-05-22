@@ -131,7 +131,8 @@ function buildJS(target) {
     'contentscript.js',
     'options.js',
     'popup.js',
-    'livereload.js'
+    'livereload.js',
+    '../config/config.js'
   ]
 
   let tasks = files.map( file => {

@@ -100,7 +100,6 @@ footer {
   float: left;
   background-color: #fafafa;
   border-radius: 4px;
-  margin-bottom: 20px;
   &:hover {
     cursor: pointer;
   }
@@ -142,14 +141,16 @@ option {
   margin-bottom: 10px;
 }
 
-.container #location-text {
-  margin-bottom: 9px;
+.container.location {
+  margin-bottom: 54px;
 }
 
 .about {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   font-weight: 100;
   font-size: 12px;
+  justify-content: space-around;
 }
