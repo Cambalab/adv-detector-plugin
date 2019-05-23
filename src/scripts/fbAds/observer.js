@@ -7,9 +7,6 @@ var container = document.querySelector(config.fbAds.mainContainerQuerySelector)
 var profile = document.querySelector(config.fbAds.profileIdContainerQuerySelector)
 var userId = sha256(profile.href).toString(hex)
 
-console.log("CONTAINER: ", container)
-console.log("USERID: ", userId)
-
 function searchForAds(mutationsList) {
   mutationsList.forEach(mutation => {
     checkNode(mutation)
@@ -42,14 +39,13 @@ function buildData(node, account) {
   let postId = node.target.querySelector(config.fbAds.postIdQuerySelector).value
   return {
     postId: pageId + "_" + postId,
+    accountId: pageId,
     userId: userId
   }
 }
 
 function isAd(node) {
-  var postSubtitleHTML = node.target.querySelector(config.fbAds.postSubtitleQuerySelector).outerHTML
-  var postSubtitle = strip(postSubtitleHTML.replace(/-/g, ''))
-  console.log("Subtitle: ", postSubtitle)
+  var postSubtitle = node.target.querySelector(config.fbAds.postSubtitleQuerySelector).innerText
   return postSubtitle.includes(config.fbAds.targetAdWord)
 }
 
@@ -59,12 +55,6 @@ function isPost(node) {
 
 function sendAd(ad) {
   ext.runtime.sendMessage(ad)
-}
-
-function strip(html) {
-  var tmp = document.createElement("DIV");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
 }
 
 function run() {

@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   storage.get("pub_elec_location", m => {
     for (var i = 0; i < locations.length; i++) {
       var opt = document.createElement("option")
-      opt.value = locations[i]
-      opt.innerHTML = locations[i]
+      opt.setAttribute('value', locations[i]);
+      opt.appendChild(document.createTextNode(locations[i]));
 
       if (m["pub_elec_location"] === locations[i]) {
         opt.selected = "selected"

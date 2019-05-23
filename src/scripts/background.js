@@ -7,17 +7,18 @@ function handleMessage(request, sender, sendResponse) {
     var ad = {
       userId: request.userId,
       userSelectedLocation: m["pub_elec_location"],
-      fbPostId: request.postId
+      fbPostId: request.postId,
+      fbAccountId: request.accountId,
+      visualizedDate: new Date()
     }
-    console.log("AD: ", ad)
     fetch(config.adUri, {
       headers: { "Content-Type": "application/json; charset=utf-8" },
       method: 'post',
       body: JSON.stringify(ad)
     }).then(function(response) {
-      console.log("ADVER OK RESPONSE: ", response)
+      console.log("SENDING DATA SUCCESSFULLY")
     }).catch(function(response) {
-      console.log("ADVER ERROR RESPONSE: ", response)
+      console.log("ERROR WHILE SENDING DATA")
     });
   })
 }

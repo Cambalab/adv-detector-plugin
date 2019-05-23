@@ -21,7 +21,6 @@ var manifest = {
   dev: {
     "background": {
       "scripts": [
-        "scripts/livereload.js",
         "scripts/background.js"
       ]
     }
@@ -30,7 +29,7 @@ var manifest = {
   firefox: {
     "applications": {
       "gecko": {
-        "id": "my-app-id@mozilla.org"
+        "id": "publielectoralplugin@adc.org.ar"
       }
     }
   }
@@ -43,14 +42,6 @@ gulp.task('clean', () => {
 
 gulp.task('build', (cb) => {
   $.runSequence('clean', 'styles', 'ext', cb)
-});
-
-gulp.task('watch', ['build'], () => {
-  $.livereload.listen();
-
-  gulp.watch(['./src/**/*']).on("change", () => {
-    $.runSequence('build', $.livereload.reload);
-  });
 });
 
 gulp.task('default', ['build']);
@@ -131,7 +122,6 @@ function buildJS(target) {
     'contentscript.js',
     'options.js',
     'popup.js',
-    'livereload.js',
     '../config/config.js'
   ]
 
