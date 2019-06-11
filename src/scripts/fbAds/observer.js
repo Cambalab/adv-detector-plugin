@@ -18,7 +18,7 @@ function checkNode(mutation) {
     let account = getTargetAdAccount(mutation)
     if (account) {
       //add blue border to identify target ad
-      mutation.target.style.border = "3px solid #0000FF"
+      mutation.target.style.border = "3px solid #49c096"
       let adData = buildData(mutation, account)
       sendAd(adData)
     }

@@ -1,8 +1,8 @@
 {
-  "name": "PubliElectoral Plugin",
-  "version": "0.0.3",
+  "name": "Advertising_Detector_Plug-in",
+  "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Escanea la publicidad política que aparece en tu cuenta de Facebook",
+  "description": "This Plug-in scans the advertising that appear on your Facebook news feed.",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon.png"
@@ -31,7 +31,7 @@
     "default_icon": {
       "16": "icons/icon.png"
     },
-    "default_title": "PubliElectoral",
+    "default_title": "Advertising Detector Plug-in",
     "default_popup": "popup.html"
   }
 }

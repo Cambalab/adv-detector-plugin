@@ -1,7 +1,7 @@
 {
-  "name": "publielectoral-plugin",
-  "version": "0.0.3",
-  "description": "Plugin para scanear la publicidad que te aparece en tu cuenta de Facebook",
+  "name": "Advertising_Detector_Plug-in",
+  "version": "0.0.2",
+  "description": "This Plug-in scans the advertising that appear on your Facebook news feed.",
   "license": "GPL-3.0",
   "scripts": {
     "chrome-build": "cross-env TARGET=chrome gulp",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.camba.coop/adc/adc-plugin-publicidad"
+    "url": "https://github.com/Cambalab/advertising-detector-plugin"
   },
   "author": "Cambá <info@camba.coop> (https://github.com/cambalab)",
   "bugs": {},
