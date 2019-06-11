@@ -1,6 +1,6 @@
 {
   "name": "publielectoral-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Plugin para scanear la publicidad que te aparece en tu cuenta de Facebook",
   "license": "GPL-3.0",
   "scripts": {

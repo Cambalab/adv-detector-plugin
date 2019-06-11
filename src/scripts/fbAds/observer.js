@@ -15,12 +15,10 @@ function searchForAds(mutationsList) {
 
 function checkNode(mutation) {
   if (isPost(mutation) && isAd(mutation)) {
-    //add blue border to identify ad
-    mutation.target.style.border = "3px solid #0000FF"
     let account = getTargetAdAccount(mutation)
-    if (account !== null) {
-      //add red border to identify target ad
-      mutation.target.style.border = "3px solid #FF0000"
+    if (account) {
+      //add blue border to identify target ad
+      mutation.target.style.border = "3px solid #0000FF"
       let adData = buildData(mutation, account)
       sendAd(adData)
     }
@@ -28,8 +26,10 @@ function checkNode(mutation) {
 }
 
 function getTargetAdAccount(node) {
+  let subtitleNode = node.target.querySelector(config.fbAds.postSubtitleQuerySelector)
+  let titleNode = subtitleNode.previousSibling.innerHTML
   let account = config.accounts.filter( (account) => {
-    return node.target.outerHTML.includes(account.page_id) && node.target.outerHTML.includes(account.page_name)
+    return titleNode.includes(account.page_id) && titleNode.includes(account.page_name)
   })
   return account.length === 1 ? account[0] : null
 }
@@ -40,13 +40,18 @@ function buildData(node, account) {
   return {
     postId: pageId + "_" + postId,
     accountId: pageId,
-    userId: userId
+    userId: userId,
+    visualizedDate: new Date()
   }
 }
 
 function isAd(node) {
-  var postSubtitle = node.target.querySelector(config.fbAds.postSubtitleQuerySelector).innerText
-  return postSubtitle.includes(config.fbAds.targetAdWord)
+  let subtitleNode = node.target.querySelector(config.fbAds.postSubtitleQuerySelector)
+  let subtitle = subtitleNode.innerText.replace(/-/g, '')
+  if (subtitle.includes(config.fbAds.targetAdWord)) {
+    node.target.style.border = "3px solid #FF00FF"
+  }
+  return subtitle.includes(config.fbAds.targetAdWord)
 }
 
 function isPost(node) {

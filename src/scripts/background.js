@@ -9,7 +9,7 @@ function handleMessage(request, sender, sendResponse) {
       userSelectedLocation: m["pub_elec_location"],
       fbPostId: request.postId,
       fbAccountId: request.accountId,
-      visualizedDate: new Date()
+      visualizedDate: request.visualizedDate
     }
     fetch(config.adUri, {
       headers: { "Content-Type": "application/json; charset=utf-8" },
