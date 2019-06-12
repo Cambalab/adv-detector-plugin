@@ -29,7 +29,7 @@ var manifest = {
   firefox: {
     "applications": {
       "gecko": {
-        "id": "publielectoralplugin@adc.org.ar"
+        "id": "advertising-detector-plugin@camba.coop"
       }
     }
   }
