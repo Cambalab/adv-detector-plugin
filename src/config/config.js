@@ -20,11 +20,11 @@ export default
     "City nine",
     "City ten"
   ],
-  "adUri": "API Backend URL",
+  "adUri": "API Backend URL", // Backend url
   "fbAds": {
     "mainContainerQuerySelector": "[id^='topnews_main_stream_'",
     "profileIdContainerQuerySelector": "a[title='Perfil']",
-    "targetAdWord": "Sponsored",
+    "targetAdWord": "Sponsored", // In Spanish the word is Publicidad
     "postQuerySelector": "hyperfeed_story_id_",
     "postSubtitleQuerySelector": "[id^='fe_edsubtitle']",
     "postIdQuerySelector": "[name=ft_ent_identifier]"
