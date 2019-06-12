@@ -1,36 +1,83 @@
-# adc-plugin-publicidad | PubliElectoral
+<div align="center">
+  <h1>
+    Advertising Detector Plug-in  
+  </h1>
+  <p>
+    <strong>Este desarrollo se llevo a cabo sobre [extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) </strong>
+  </p>
+  <img src="./icons/plugin.png" alt="advertising detector plugin">
+</div>
 
-Proyecto para [ADC](https://adc.org.ar/)
+## Features  
+  + Se pueden configurar las cuentas de donde saldrá la publicidad a relevar.  
+  + Se puede configurar un backend donde se manda la información relevada.
+  + Se puede buildear para Chrome, Mozilla y Opera, ademas de  otras gracias a las [features de extension-boilerplate](https://github.com/EmailThis/extension-boilerplate#features)  
 
-PubliElectoral es una extensión (o plugin) desarrollada por la Asociación por los Derechos Civiles (ADC) y la Cooperativa Tecnológica Cambá de la Argentina. Se descarga y se instala en el navegador de internet (de computadora o escritorio). Cuando el usuario navega por una página de Facebook, va detectando las publicidades que se le muestran según su perfil y las almacena en una base de datos, para que luego el equipo de la ADC las analice.
+## Instalación  
+  + Clonar el repositorio  ```git clone https://github.com/cambalab/advertising-detector-plugin ```  
+  + Ejecutar ```npm install```  
+  + Ejecutar ```npm run build```
 
-La extensión releva avisos publicitarios de candidatos en campaña. Lo hace a través de cuentas reales de personas como vos, que cooperan con nosotros descargándose la extensión. Nuestro objetivo es reunir esa información y analizarla para entender si desde los partidos políticos y desde las redes sociales el sistema de anuncios electorales está funcionando de manera transparente.
+## Compilar para distintos Navegadores  
+  + Navegadores Chrome y Opera
+    - Para Google Chrome, ejectuar ```npm run chrome-build```   
+    - Para Opera, ejecutar ```npm run opera-build```  
+  + Navegador Mozilla Firefox
+    - Ejecutar ```npm run firefox-build```  
 
-PubliElectoral no almacena información personal de los usuarios de ningún tipo. Lo que archivamos es información de los avisos a analizar. La misma se encontrará alojada en servidores de Alemania, protegidos por el recientemente actualizado Reglamento General de Datos de la Unión Europea (RGPD).
+  Se creará en el directorio ```advertising-detector-plugin/build/``` una carpeta por navegador con la versión compilada.  
+  + Para cargar la extensión en Google Chrome y Opera, abrir el navegador y en escribir la dirección ```chrome://extensions``` elegir *"Modo Desarrollador"* hacer clic en *"Cargar Extensión sin empaquetar"* y cargar desde el file system ```advertising-detector-plugin/build/chrome``` o ```advertising-detector-plugin/build/opera```  
+  + Para cargar la extensión en Mozilla Firefox, abrir el navegador y escribir en la dirección ```about:debugging``` hacer clic en *"Cargar Complemento Temporario"* y desde el file system cargar el directorio ```advertising-detector-plugin/build/firefox```
 
-## Requerimientos
-```
-node v10
-```
+## Empaquetado  
+  + Ejecutar ```npm run chrome-dist``` , ```npm run firefox-dist``` o ```npm run opera-dist``` y se creará un archivo **.zip** en ```advertising-detector-plugin/dist``` para el navegador elegido, listo para subirla a la AppStore.
 
-## Generar zip para distribuir el plugin
+## Configuración    
+  En el archivo `advertising-detector-plugin/src/config.js` se configuran en un array, las cuentas de Facebook de las que se van a querer monitorear su publicidad  
 
-Desde la raíz del proyecto ejecutar:
+  ```javascript
+  "accounts": [
+    {
+      "name": "Account Name", // for example: Facebook
+      "page_id": "Page id", // for example: 185150934832623
+      "page_name": "Url page" // for example: https://www.facebook.com/enespanol/
+    }
+  ],
+  ```  
 
-### Firefox
+  Para configurar las ciudades, agregarlas en *locations*  
 
-```
-npm install
-npm run firefox-dist
-```
+  ```javascript
+  "locations": [
+    "Select an option",
+    "City one",
+    "City two",
+    "City three",
+    "City four",
+    "City five",
+    "City six",
+    "City seven",
+    "City eight",
+    "City nine",
+    "City ten"
+  ],
+  ```  
 
-### Chrome
+  Dirección del Backend a donde va a mandar la información relevada  
 
-```
-npm install
-npm run chrome-dist
-```
+  ```javascript
+  "adUri": "API Backend URL", // Backend url
+  ```  
 
-El script para generar el zip es el archivo ***gulpfile.babel.js*** que se encuentra en la raíz del proyecto.
-El zip se genera en la carpeta ***dist***.
-El código fuente está en la carpeta ***src***
+  Configurar los selectores con el cual se define una *Publicidad* en Facebook  
+
+  ```javascript
+  "fbAds": {
+    "mainContainerQuerySelector": "[id^='topnews_main_stream_'",
+    "profileIdContainerQuerySelector": "a[title='Perfil']",
+    "targetAdWord": "Sponsored", // In Spanish the word is Publicidad
+    "postQuerySelector": "hyperfeed_story_id_",
+    "postSubtitleQuerySelector": "[id^='fe_edsubtitle']",
+    "postIdQuerySelector": "[name=ft_ent_identifier]"
+  }
+  ```
