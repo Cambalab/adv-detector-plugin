@@ -1,39 +1,43 @@
 <div align="center">
   <h1>
-    Advertising Detector Plug-in  
+    Advertising Detector Plugin  
   </h1>
   <p>
-    <strong>Este desarrollo se llevo a cabo sobre [extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) </strong>
+    <strong>This Plugin was developed about [extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) </strong>
   </p>
-  <img src="./icons/plugin.png" alt="advertising detector plugin">
-</div>
+  <img src="./Documentation/images/plugin.png" alt="advertising detector plugin">
+</div>  
+
+
+***Spanish Version*** [here](./Documentation/es/README.md)  
 
 ## Features  
-  + Se pueden configurar las cuentas de donde saldrá la publicidad a relevar.  
-  + Se puede configurar un backend donde se manda la información relevada.
-  + Se puede buildear para Chrome, Mozilla y Opera, ademas de  otras gracias a las [features de extension-boilerplate](https://github.com/EmailThis/extension-boilerplate#features)  
+  + You can set the accounts where then it's going to get the advertising to monitor.  
+  + You can set the Backend API Url where it's going to send the info.  
+  + You can build to Chrome, Mozilla and Opera browsers.  
+  + More features [here](https://github.com/EmailThis/extension-boilerplate#features)  
 
-## Instalación  
-  + Clonar el repositorio  ```git clone https://github.com/cambalab/advertising-detector-plugin ```  
-  + Ejecutar ```npm install```  
-  + Ejecutar ```npm run build```
+## Install  
+  + Clone the repository  ```git clone https://github.com/cambalab/advertising-detector-plugin ```  
+  + Run ```npm install```  
+  + Run ```npm run build```
 
-## Compilar para distintos Navegadores  
-  + Navegadores Chrome y Opera
-    - Para Google Chrome, ejectuar ```npm run chrome-build```   
-    - Para Opera, ejecutar ```npm run opera-build```  
-  + Navegador Mozilla Firefox
-    - Ejecutar ```npm run firefox-build```  
+## Build for each Browser
+  + For Chrome and Opera browsers
+    - **Chrome:** run ```npm run chrome-build```   
+    - **Opera:**, run ```npm run opera-build```  
+  + For Mozilla **Firefox browser**
+    - Run ```npm run firefox-build```  
 
-  Se creará en el directorio ```advertising-detector-plugin/build/``` una carpeta por navegador con la versión compilada.  
-  + Para cargar la extensión en Google Chrome y Opera, abrir el navegador y en escribir la dirección ```chrome://extensions``` elegir *"Modo Desarrollador"* hacer clic en *"Cargar Extensión sin empaquetar"* y cargar desde el file system ```advertising-detector-plugin/build/chrome``` o ```advertising-detector-plugin/build/opera```  
-  + Para cargar la extensión en Mozilla Firefox, abrir el navegador y escribir en la dirección ```about:debugging``` hacer clic en *"Cargar Complemento Temporario"* y desde el file system cargar el directorio ```advertising-detector-plugin/build/firefox```
+  In the directory ```advertising-detector-plugin/build/``` will be create a new folder for each browser with the builded version.  
+  + For load the extension in Chrome and Opera browsers, open it and navigate to ```chrome://extensions``` then choose *"Developer Mode"*. Do click on *"Load unpacked extension"* and from the file system load  ```advertising-detector-plugin/build/chrome``` or ```advertising-detector-plugin/build/opera```  
+  + For load the extension in Firefoz browser, open it and navigate to ```about:debugging``` then choose *"Load Temporary Add-on"* and from the file system load  ```advertising-detector-plugin/build/firefox```
 
-## Empaquetado  
-  + Ejecutar ```npm run chrome-dist``` , ```npm run firefox-dist``` o ```npm run opera-dist``` y se creará un archivo **.zip** en ```advertising-detector-plugin/dist``` para el navegador elegido, listo para subirla a la AppStore.
+## Packaging  
+  + Run ```npm run chrome-dist``` , ```npm run firefox-dist``` or ```npm run opera-dist``` and will be create a **zipped** file in ```advertising-detector-plugin/dist``` for the browser that has been choosed, ready to upload to the AppStore.
 
-## Configuración    
-  En el archivo `advertising-detector-plugin/src/config.js` se configuran en un array, las cuentas de Facebook de las que se van a querer monitorear su publicidad  
+## Settings    
+  + In the file `advertising-detector-plugin/src/config.js` is an array with the accounts that going to monitor.
 
   ```javascript
   "accounts": [
@@ -45,7 +49,7 @@
   ],
   ```  
 
-  Para configurar las ciudades, agregarlas en *locations*  
+  + For configure the location, add the options in the array *locations*  
 
   ```javascript
   "locations": [
@@ -63,19 +67,19 @@
   ],
   ```  
 
-  Dirección del Backend a donde va a mandar la información relevada  
+  + Backend API Url, where it will be send the information  
 
   ```javascript
   "adUri": "API Backend URL", // Backend url
   ```  
 
-  Configurar los selectores con el cual se define una *Publicidad* en Facebook  
+  + To set the *HTML* selectors with that Facebook define the **Sponsored** posts (advertising)
 
   ```javascript
   "fbAds": {
     "mainContainerQuerySelector": "[id^='topnews_main_stream_'",
     "profileIdContainerQuerySelector": "a[title='Perfil']",
-    "targetAdWord": "Sponsored", // In Spanish the word is Publicidad
+    "targetAdWord": "Sponsored",
     "postQuerySelector": "hyperfeed_story_id_",
     "postSubtitleQuerySelector": "[id^='fe_edsubtitle']",
     "postIdQuerySelector": "[name=ft_ent_identifier]"
