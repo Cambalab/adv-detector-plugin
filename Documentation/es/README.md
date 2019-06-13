@@ -3,7 +3,7 @@
     Advertising Detector Plug-in  
   </h1>
   <p>
-    <strong>Este desarrollo se llevo a cabo sobre [extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) </strong>
+    <strong>Este desarrollo se llevo a cabo sobre <a href="https://github.com/EmailThis/extension-boilerplate">extension-boilerplate</a> </strong>
   </p>
   <img src="./Documentation/images/plugin.png" alt="advertising detector plugin">
 </div>
