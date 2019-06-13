@@ -29,7 +29,7 @@ var manifest = {
   firefox: {
     "applications": {
       "gecko": {
-        "id": "advertising-detector-plugin@camba.coop"
+        "id": "advertising-detector-plugin"
       }
     }
   }
