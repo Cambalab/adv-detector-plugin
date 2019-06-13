@@ -5,7 +5,7 @@
   <p>
     <strong>Este desarrollo se llevo a cabo sobre [extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) </strong>
   </p>
-  <img src="./icons/plugin.png" alt="advertising detector plugin">
+  <img src="./Documentation/images/plugin.png" alt="advertising detector plugin">
 </div>
 
 ## Features  
