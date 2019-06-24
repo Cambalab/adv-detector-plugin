@@ -31,7 +31,7 @@
 
   In the directory ```advertising-detector-plugin/build/``` will be create a new folder for each browser with the builded version.  
   + For load the extension in Chrome and Opera browsers, open it and navigate to ```chrome://extensions``` then choose *"Developer Mode"*. Do click on *"Load unpacked extension"* and from the file system load  ```advertising-detector-plugin/build/chrome``` or ```advertising-detector-plugin/build/opera```  
-  + For load the extension in Firefoz browser, open it and navigate to ```about:debugging``` then choose *"Load Temporary Add-on"* and from the file system load  ```advertising-detector-plugin/build/firefox```
+  + For load the extension in Firefox browser, open it and navigate to ```about:debugging``` then choose *"Load Temporary Add-on"* and from the file system load  ```advertising-detector-plugin/build/firefox```
 
 ## Packaging  
   + Run ```npm run chrome-dist``` , ```npm run firefox-dist``` or ```npm run opera-dist``` and will be create a **zipped** file in ```advertising-detector-plugin/dist``` for the browser that has been choosed, ready to upload to the AppStore.
