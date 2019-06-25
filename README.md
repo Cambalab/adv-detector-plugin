@@ -18,7 +18,7 @@
   + More features [here](https://github.com/EmailThis/extension-boilerplate#features)  
 
 ## Install  
-  + Clone the repository  ```git clone https://github.com/cambalab/advertising-detector-plugin ```  
+  + Clone the repository  ```git clone https://github.com/Cambalab/adv-detector-plugin.git ```  
   + Run ```npm install```  
   + Run ```npm run build```
 

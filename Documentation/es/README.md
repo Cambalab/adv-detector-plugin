@@ -5,7 +5,7 @@
   <p>
     <strong>Este desarrollo se llevo a cabo sobre <a href="https://github.com/EmailThis/extension-boilerplate">extension-boilerplate</a> </strong>
   </p>
-  <img src="./Documentation/images/plugin.png" alt="advertising detector plugin">
+  <img src="../images/plugin.png" alt="advertising detector plugin">
 </div>
 
 ## Features  
@@ -15,7 +15,7 @@
   + Más features [aquí](https://github.com/EmailThis/extension-boilerplate#features)  
 
 ## Instalación  
-  + Clonar el repositorio  ```git clone https://github.com/cambalab/advertising-detector-plugin ```  
+  + Clonar el repositorio  ```git clone https://github.com/Cambalab/adv-detector-plugin.git ```  
   + Ejecutar ```npm install```  
   + Ejecutar ```npm run build```
 
