@@ -26,15 +26,15 @@
   + Navegador Mozilla Firefox
     - Ejecutar ```npm run firefox-build```  
 
-  Se creará en el directorio ```advertising-detector-plugin/build/``` una carpeta por navegador con la versión compilada.  
-  + Para cargar la extensión en Google Chrome y Opera, abrir el navegador y en escribir la dirección ```chrome://extensions``` elegir *"Modo Desarrollador"* hacer clic en *"Cargar Extensión sin empaquetar"* y cargar desde el file system ```advertising-detector-plugin/build/chrome``` o ```advertising-detector-plugin/build/opera```  
-  + Para cargar la extensión en Mozilla Firefox, abrir el navegador y escribir en la dirección ```about:debugging``` hacer clic en *"Cargar Complemento Temporario"* y desde el file system cargar el directorio ```advertising-detector-plugin/build/firefox```
+  Se creará en el directorio ```adv-detector-plugin/build/``` una carpeta por navegador con la versión compilada.  
+  + Para cargar la extensión en Google Chrome y Opera, abrir el navegador y en escribir la dirección ```chrome://extensions``` elegir *"Modo Desarrollador"* hacer clic en *"Cargar Extensión sin empaquetar"* y cargar desde el file system ```adv-detector-plugin/build/chrome``` o ```adv-detector-plugin/build/opera```  
+  + Para cargar la extensión en Mozilla Firefox, abrir el navegador y escribir en la dirección ```about:debugging``` hacer clic en *"Cargar Complemento Temporario"* y desde el file system cargar el directorio ```adv-detector-plugin/build/firefox```
 
 ## Empaquetado  
-  + Ejecutar ```npm run chrome-dist``` , ```npm run firefox-dist``` o ```npm run opera-dist``` y se creará un archivo **.zip** en ```advertising-detector-plugin/dist``` para el navegador elegido, listo para subirla a la AppStore.
+  + Ejecutar ```npm run chrome-dist``` , ```npm run firefox-dist``` o ```npm run opera-dist``` y se creará un archivo **.zip** en ```adv-detector-plugin/dist``` para el navegador elegido, listo para subirla a la AppStore.
 
 ## Configuración    
-  + En el archivo `advertising-detector-plugin/src/config.js` se configuran en un array, las cuentas de Facebook de las que se van a querer monitorear su publicidad  
+  + En el archivo `adv-detector-plugin/src/config.js` se configuran en un array, las cuentas de Facebook de las que se van a querer monitorear su publicidad  
 
   ```javascript
   "accounts": [

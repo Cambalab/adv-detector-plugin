@@ -29,15 +29,15 @@
   + For Mozilla **Firefox browser**
     - Run ```npm run firefox-build```  
 
-  In the directory ```advertising-detector-plugin/build/``` will be create a new folder for each browser with the builded version.  
-  + For load the extension in Chrome and Opera browsers, open it and navigate to ```chrome://extensions``` then choose *"Developer Mode"*. Do click on *"Load unpacked extension"* and from the file system load  ```advertising-detector-plugin/build/chrome``` or ```advertising-detector-plugin/build/opera```  
-  + For load the extension in Firefox browser, open it and navigate to ```about:debugging``` then choose *"Load Temporary Add-on"* and from the file system load  ```advertising-detector-plugin/build/firefox```
+  In the directory ```adv-detector-plugin/build/``` will be create a new folder for each browser with the builded version.  
+  + For load the extension in Chrome and Opera browsers, open it and navigate to ```chrome://extensions``` then choose *"Developer Mode"*. Do click on *"Load unpacked extension"* and from the file system load  ```adv-detector-plugin/build/chrome``` or ```adv-detector-plugin/build/opera```  
+  + For load the extension in Firefox browser, open it and navigate to ```about:debugging``` then choose *"Load Temporary Add-on"* and from the file system load  ```adv-detector-plugin/build/firefox```
 
 ## Packaging  
-  + Run ```npm run chrome-dist``` , ```npm run firefox-dist``` or ```npm run opera-dist``` and will be create a **zipped** file in ```advertising-detector-plugin/dist``` for the browser that has been choosed, ready to upload to the AppStore.
+  + Run ```npm run chrome-dist``` , ```npm run firefox-dist``` or ```npm run opera-dist``` and will be create a **zipped** file in ```adv-detector-plugin/dist``` for the browser that has been choosed, ready to upload to the AppStore.
 
 ## Settings    
-  + In the file `advertising-detector-plugin/src/config.js` is an array with the accounts that going to monitor.
+  + In the file `adv-detector-plugin/src/config.js` is an array with the accounts that going to monitor.
 
   ```javascript
   "accounts": [
