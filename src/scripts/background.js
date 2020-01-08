@@ -3,10 +3,10 @@ import storage from "./utils/storage"
 import config from '../config/config.js'
 
 function handleMessage(request, sender, sendResponse) {
-  storage.get("pub_elec_location", m => {
+  storage.get("plugin_location", m => {
     var ad = {
       userId: request.userId,
-      userSelectedLocation: m["pub_elec_location"],
+      userSelectedLocation: m["plugin_location"],
       fbPostId: request.postId,
       fbAccountId: request.accountId,
       visualizedDate: request.visualizedDate

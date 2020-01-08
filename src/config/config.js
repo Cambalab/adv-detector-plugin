@@ -26,7 +26,7 @@ export default
     "profileIdContainerQuerySelector": "a[title='Perfil']",
     "targetAdWord": "Sponsored", // In Spanish the word is Publicidad
     "postQuerySelector": "hyperfeed_story_id_",
-    "postSubtitleQuerySelector": "[id^='fe_edsubtitle']",
-    "postIdQuerySelector": "[name=ft_ent_identifier]"
+    "postIdQuerySelector": "[name=ft_ent_identifier]",
+    "postSubtitleQuerySelector": /([\s\S]*.*[mM].*[eE].*[tT].*[aA]*.*[\s\S]|[fF].*[eE].*[eE].*[dD].*[sS].*[uU].*[bB].*[tT].*[iI].*[tT].*[lL].*[eE]|[sS].*[tT].*[oO].*[rR].*[yY]*.*[\s\S])/
   }
 }

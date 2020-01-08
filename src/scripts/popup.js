@@ -7,13 +7,13 @@ const locations = config.locations
 document.addEventListener("DOMContentLoaded", function(event) {
   var locationSelect = document.getElementById("location")
 
-  storage.get("pub_elec_location", m => {
+  storage.get("plugin_location", m => {
     for (var i = 0; i < locations.length; i++) {
       var opt = document.createElement("option")
       opt.setAttribute('value', locations[i]);
       opt.appendChild(document.createTextNode(locations[i]));
 
-      if (m["pub_elec_location"] === locations[i]) {
+      if (m["plugin_location"] === locations[i]) {
         opt.selected = "selected"
       }
 
@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   })
 
   locationSelect.addEventListener("change", function(e) {
-    storage.set({pub_elec_location: e.target.value})
+    storage.set({plugin_location: e.target.value})
   })
 })
